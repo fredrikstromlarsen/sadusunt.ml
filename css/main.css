@@ -15,7 +15,7 @@ body{
     box-sizing: border-box;
     cursor: default;
     font-family: 'Open Sans', sans-serif;
-    font-size: 90%;
+    font-size: 110%;
 }
 ::-webkit-scrollbar {
     width: 0.8rem;
@@ -149,6 +149,7 @@ li{
     line-height: 1.6rem;
 }
 .share{
+    z-index: 10;
     display: flex;
     flex-direction: column;
     height: auto;
@@ -169,7 +170,7 @@ li{
     color: #fff;
     text-decoration: none;
     transition: background-color 200ms ease-out;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -520,8 +521,12 @@ footer .content{
     grid-column-end: 4;
 
     padding: 0 1.5rem 1.5rem 1.5rem;
-    margin: 0 2rem 0 2rem;
-    
+    margin: 0 2rem;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     border-bottom: 0.07rem solid rgba(255, 255, 255, 0.1);
 }
 .footer-top img{
@@ -529,7 +534,6 @@ footer .content{
     float: left;
 }
 .footer-top h1{
-    line-height: 6rem; 
     font-size: 3rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -638,25 +642,25 @@ footer .content{
     margin: auto;
     width: min-content;
 }
-.footer-mid-container .h3-container{
+.footer-mid-container .p-container{
     width: 100%;
     height: min-content;
     margin: 5rem 0 0 0;
 }
-.h3-container > h3{
+.p-container > p{
     font-size: 1rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.65);
     text-align: center;
     line-height: 2rem;
 }
-.h3-container > h3 > a{
+.p-container > p > a{
     color: inherit;
     font-size: inherit;
 
     padding: 0.2rem;
 }
-.h3-container > h3 > a:hover{
+.p-container > p > a:hover{
     color: white;
 }
 .footer-contact{
@@ -784,14 +788,19 @@ footer .content{
     color: rgb(100, 100, 100);
 }
 
+@media only screen and (min-width: 100em){
+    *{
+        font-size: auto;
+    }
+}
 @media only screen and (max-width: 100em){
     *{
-        font-size: 75%;
+        font-size: 90%;
     }
 }
 @media only screen and (max-width: 75em){
     *{
-        font-size: 50%;
+        font-size: 65%;
     }
 }
 @media only screen and (max-width: 50em){
